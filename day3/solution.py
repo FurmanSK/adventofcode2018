@@ -34,6 +34,7 @@ for line in data:
 
 print(len(cover))
 
+# Part 2 finds ID that doesn't overlap
 for line in data:
     c1 = int(line[2][0]) # starting col
     r1 = int(line[2][1]) # starting row
