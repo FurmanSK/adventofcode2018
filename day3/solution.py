@@ -11,7 +11,7 @@ for line in f:
     data.append(a)
 
 fabric = []
-overlap = []
+
 for i in range(1000):
     fabric.append([])
     for j in range(1000):
@@ -33,3 +33,20 @@ for line in data:
                 cover.add((x,y))
 
 print(len(cover))
+
+for line in data:
+    c1 = int(line[2][0]) # starting col
+    r1 = int(line[2][1]) # starting row
+    c2 = int(line[3][0]) # number of cols it takes up
+    r2 = int(line[3][1]) # number of rows it takes up
+    overlaps = False
+    for x in range(c1, c1 + c2):
+        for y in range(r1, r1 + r2):
+            if fabric[x][y] == line[0]:
+                continue
+            else:
+                overlaps = True
+                break
+    if overlaps == False:
+        print("ID that doesn't overlap is ", line[0])
+    
