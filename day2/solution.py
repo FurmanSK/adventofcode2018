@@ -1,8 +1,8 @@
 import collections
-import difflib
+
 data = []
 
-f = open('input.txt', 'r')
+f = open('day2/input.txt', 'r')
 for line in f:
     data.append(line.rstrip())
 

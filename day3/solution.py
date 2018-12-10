@@ -1,6 +1,6 @@
 data = []
 cover = set()
-f = open('input.txt', 'r')
+f = open('day3/input.txt', 'r')
 for line in f:
     line = line.rstrip()
     a = line.split(" ")
