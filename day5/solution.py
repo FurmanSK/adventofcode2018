@@ -1,4 +1,6 @@
 import sys
+import re
+
 sys.setrecursionlimit(50000)
 f = open('day5/input.txt', 'r')
 data = f.readline()
@@ -31,13 +33,20 @@ def checkchars(s):
                     # checkchars(s)
                     return False
 
-    
 
 # If an upper and lower letter are the same letter (type) but different polarity (upper/lower)
 # then destroy them (remove them) from the string.
 d = list(data)
+# while(True):
+#     if (checkchars(d)):
+#         break
+# print("Number left = ", len(d))
+
+d2 = list(data)
+
 while(True):
-    print("lenght = " , len(d))
-    if (checkchars(d)):
-        break
-print("Number left = ", len(d))
+    # need to remove each 26 letters at one time and then run the checkchars function on each one to see which one gives us the smallest lenght.
+    # 
+    for i in range(26):
+        t = list(re.sub('[aA]', '', data))
+    
